@@ -260,3 +260,14 @@ new Swiper(".floorplan-slider", {
     }
 }); 
 /////////floorplan-slider////////
+
+/////////floorplan-popupFloorplan////////
+function openFloorPlan(img,title,size){
+
+    document.getElementById('popupFloorplan').src = img;
+
+    document.getElementById('popupTitle').innerText = title;
+
+    document.getElementById('popupSize').innerText = size;
+}
+/////////floorplan-popupFloorplan////////

@@ -562,9 +562,9 @@ color-mix(in oklab, #000 80%, transparent);">
     </section>
     <section id="about" class="section-pad relative ">
         <div class="container-luxe">
-            <div class="row align-items-center gx-6 gap-12">
+            <div class="custome-flex gx-6">
                 <!-- Image -->
-                <div class="col-md-12 col-lg-6 ">
+                <div class="custome-flex-col">
                     <div class="position-relative">
                         <div class="overflow-hidden image-reveal reveal-section">    <div class="reveal-overlay"></div> <img src="images/about-architecture.jpg"
                                 alt="Luxury Architecture" class="img-fluid w-100 "
@@ -580,7 +580,7 @@ color-mix(in oklab, #000 80%, transparent);">
                     </div>
                 </div>
                 <!-- Content -->
-                <div class="col-md-12 col-lg-6">
+                <div class="custome-flex-col ">
                     <div class="d-flex flex-column gap-4">
                         <!-- Subtitle --><span class="eyebrow fade-up">
                             About The Baya Company
@@ -588,7 +588,7 @@ color-mix(in oklab, #000 80%, transparent);">
                         <!-- Heading -->
                         <h2 class="h2-font fade-up">
                             Crafting Trust Through
-                            <span class="text-gradient-gold">
+                            <span class="text-gradient-gold fst-italic ">
                                 Timeless Spaces
                             </span>
                         </h2>
@@ -933,7 +933,11 @@ color-mix(in oklab, #000 80%, transparent);">
                         class="hover-svg-icon bg-transparent border-0"
                         data-bs-toggle="modal"
                         data-bs-target="#floorplanModal"
-                        onclick="showFloorplan('images/floorplan-3bhk.jpg')">
+                         onclick="openFloorPlan(
+        'images/floorplan-3bhk.jpg',
+        '3 BHK',
+        'Approx. 1,250 sq.ft.'
+    )">
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="40"
@@ -997,7 +1001,11 @@ color-mix(in oklab, #000 80%, transparent);">
                         class="hover-svg-icon bg-transparent border-0"
                         data-bs-toggle="modal"
                         data-bs-target="#floorplanModal"
-                        onclick="showFloorplan('images/floorplan-3plus-CFYn2eeb.jpg')">
+                        onclick="openFloorPlan(
+        'images/floorplan-3plus-CFYn2eeb.jpg',
+        '3+1 BHK',
+        'Approx. 1,520 sq.ft.'
+    )">
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="40"
@@ -1062,7 +1070,11 @@ color-mix(in oklab, #000 80%, transparent);">
                         class="hover-svg-icon bg-transparent border-0"
                         data-bs-toggle="modal"
                         data-bs-target="#floorplanModal"
-                        onclick="showFloorplan('images/floorplan-4bhk.jpg')">
+                        onclick="openFloorPlan(
+        'images/floorplan-4bhk.jpg',
+        '4 BHK',
+        'Approx. 1,840 sq.ft..'
+    )">
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="40"
@@ -1126,7 +1138,12 @@ color-mix(in oklab, #000 80%, transparent);">
                         class="hover-svg-icon bg-transparent border-0"
                         data-bs-toggle="modal"
                         data-bs-target="#floorplanModal"
-                        onclick="showFloorplan('images/floorplan-4plus.jpg')">
+                        onclick="openFloorPlan(
+        'images/floorplan-4plus.jpg',
+        '4+1 BHK',
+        'Approx. 2,180 sq.ft.'
+    )"
+                      >
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="40"
@@ -1877,9 +1894,9 @@ color-mix(in oklab, #000 80%, transparent);">
                 </button>
                 <div
                     class="modal-body d-flex flex-column align-items-center justify-content-center position-relative p-0">
-                    <button class="gallery-arrow prev-btn" onclick="prevImage()"> &#10094; </button>
+                    <button class="gallery-arrow prev-btn" onclick="prevImage()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left size-10" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button>
                     <div class="popup-image-wrapper"> <img id="popupImage" class="img-fluid" alt="Gallery Popup"> </div>
-                    <button class="gallery-arrow next-btn" onclick="nextImage()"> &#10095; </button>
+                    <button class="gallery-arrow next-btn" onclick="nextImage()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right size-10" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>  </button>
                     <div id="popupCaption" class="modal-image-caption mt-3 text-center"> Exterior Renders </div>
                 </div>
             </div>
@@ -1892,7 +1909,7 @@ color-mix(in oklab, #000 80%, transparent);">
     <div class="modal fade floorplan-modal" id="floorplanModal" tabindex="-1">
 
     <button type="button"
-            class="btn-close-custom"
+            class="btn-close-custom-2"
             data-bs-dismiss="modal">
         ✕
     </button>

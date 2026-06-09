@@ -410,7 +410,7 @@ font-family: Cormorant Garamond, serif;
 }
 
 .glass-gold .glass-gold-bhk {
-	font-weight: 600;
+	font-weight: 500;
 	font-family: Cormorant Garamond, serif;
 	font-size: 1.875rem;
 	line-height: 1;
@@ -485,8 +485,8 @@ transform: translateY(0px);
 }
 .about-year-box {
 	position: absolute;
-	bottom: -22px;
-	right: -22px;
+	bottom: -18px;
+	right: -18px;
 	z-index: 11;
 }
 
@@ -500,7 +500,15 @@ transform: translateY(0px);
 	font-size: 12px;
 	line-height: 1.2;
 }
-
+.custome-flex.gx-6 {
+    display: flex;
+    gap: calc(var(--spacing) * 19);
+    align-content: center;
+    align-items: center;
+}
+.custome-flex-col {
+    flex: 1;
+}
 .hairline {
 	background: linear-gradient(90deg, transparent, var(--gold), transparent);
 	height: 1px;
@@ -645,17 +653,18 @@ transform: translateY(0px);
 }
 
 .modal-close-btn {
-	position: absolute;
-	top: 3%;
-	right: 3%;
-	background: transparent;
-	border: none;
-	color: rgba(255, 255, 255, 0.7);
-	font-size: 1.8rem;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	z-index: 1070;
-	line-height: 1;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1070;
+    line-height: 1;
+    font-weight: 600;
 }
 
 .modal-close-btn:hover {
@@ -664,11 +673,15 @@ transform: translateY(0px);
 }
 
 .modal-image-caption {
-	color: #c5a880;
-	font-family: Cormorant Garamond,serif;
-	font-size: 1.2rem;
-	letter-spacing: 1px;
-	font-weight: 400;
+    background: var(--gradient-gold);
+    font-family: Cormorant Garamond,serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background: var(--gradient-gold);
+    color: #0000;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* ************gallery section  ***********/
@@ -836,11 +849,11 @@ transform: translateY(0px);
     border-color: var(--gold);
     transform: translateY(-4px);
     box-shadow: 0 0 17px 0px #e1ad573b;
-    filter: brightness(110%);
+    filter: brightness(110%);}
 .floorplan-modal{
    background-color: var(--charcoal);
 }
-}
+
 .floorplan-modal .modal-dialog{
     max-width: 700px;
 }
@@ -852,18 +865,19 @@ transform: translateY(0px);
 }
 
 
-.btn-close-custom {
+.btn-close-custom-2 {
     position: absolute;
     z-index: 9999;
     background: none;
     border: none;
     color: #fff;
-    font-size: 22px;
+    font-size: 24px;
     right: calc(var(--spacing) * 6);
     top: calc(var(--spacing) * 6);
     cursor: pointer;
     line-height: 1;
     color: color-mix(in oklab, var(--foreground) 80%, transparent);
+	    font-weight: 600;
   }
 
 .btn-close-custom:hover{
