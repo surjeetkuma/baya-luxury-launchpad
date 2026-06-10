@@ -40,6 +40,20 @@
   --card: oklch(20% 0.007 60);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--background) ;
+}
+
+::-webkit-scrollbar-thumb {
+ background-image: var(--gradient-gold);
+  border-radius: 50px;
+  border: 2px solid  var(--gradient-gold);
+}
+
 .container {
   max-width: 1280px;
   padding-inline: clamp(1.25rem, 4vw, 3rem);
